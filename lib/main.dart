@@ -1,5 +1,6 @@
 import 'package:ecommerce_app_project/pages/homepage.dart';
 import 'package:ecommerce_app_project/pages/loginpage.dart';
+import 'package:ecommerce_app_project/pages/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,11 +15,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(
         primarySwatch: Colors.deepPurple,
-      )
-     routes: {
-        "/" : (context) => HomePage(),
-        "/home" : HomePage(),
-        "/login" : LoginPage(),
+      ),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => SplashScreen(),
+        "/splash": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage()
        },
     );
   }
