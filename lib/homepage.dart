@@ -7,7 +7,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
   String welcome = "Welcome To My App";
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+         title: Text("Flutter Ecommerce App"),
+      ),
       body: Center(
         child: Container(
         child: Text("$welcome"),
