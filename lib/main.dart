@@ -1,6 +1,7 @@
 import 'package:ecommerce_app_project/pages/homepage.dart';
 import 'package:ecommerce_app_project/pages/loginpage.dart';
 import 'package:ecommerce_app_project/pages/splash.dart';
+import 'package:ecommerce_app_project/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,11 +19,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => LoginPage(),
-        "/splash": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/home": (context) => SplashScreen(),
-        "/login": (context) => LoginPage()
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.splashRoute: (context) => SplashScreen(),
        },
     );
   }
